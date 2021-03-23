@@ -9,7 +9,9 @@
     "build:dev": "webpack",
     "build:prod": "webpack --env production",
     "dev-server": "webpack serve",
-    "test": "jest --coverage --watchAll --config=jest.config.json"
+    "test": "jest --coverage --watchAll --config=jest.config.json",
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "@babel/runtime": "7.0.0",
@@ -24,6 +26,7 @@
     "enzyme": "3.0.0",
     "enzyme-adapter-react-16": "1.0.0",
     "enzyme-to-json": "3.0.1",
+    "express": "4.15.4",
     "jest": "^26.6.3",
     "jquery": "^3.6.0",
     "live-server": "^1.2.0",
